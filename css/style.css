@@ -356,6 +356,7 @@ a:hover { text-decoration: underline; }
 .d-sip-icon { fill: #26c6da; font-size: 22px; }
 .d-voice { stroke: #26c6da; stroke-width: 2; stroke-dasharray: 6 4; fill: none; opacity: 0.85; }
 .d-app { stroke: #ff9900; stroke-width: 2; stroke-dasharray: 6 4; fill: none; opacity: 0.85; }
+.d-ipsec { stroke: #b39ddb; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; opacity: 0.8; }
 
 /* ===== Steps ===== */
 .steps {
