@@ -51,7 +51,55 @@
           Chaque mission présentée ici a été réellement menée, avec engagement de résultat.
           Les clients et certains détails sont anonymisés par respect de la confidentialité —
           le contexte, la démarche et les résultats sont fidèles.
+          Sur le terrain, la plupart de ces projets partagent le même dispositif de déploiement :
         </p>
+
+        <figure class="architecture">
+          <figcaption>Dispositif de déploiement type (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 340" role="img" aria-label="Schéma du dispositif de déploiement : un équipement pré-configuré en staging ou configuré sur site, un technicien sur place pour l'installation, et selon les possibilités un ingénieur à distance pour la recette du site">
+            <rect x="40" y="50" width="230" height="66" rx="6" class="d-zone"/>
+            <text x="155" y="76" class="d-label" text-anchor="middle">Équipement pré-configuré</text>
+            <text x="155" y="94" class="d-sub" text-anchor="middle">Préparé en centre de staging</text>
+
+            <text x="155" y="140" class="d-sub" text-anchor="middle">— ou —</text>
+
+            <rect x="40" y="158" width="230" height="66" rx="6" class="d-zone"/>
+            <text x="155" y="184" class="d-label" text-anchor="middle">Configuration sur site</text>
+            <text x="155" y="202" class="d-sub" text-anchor="middle">Injectée à l'arrivée de l'équipement</text>
+
+            <line x1="270" y1="83" x2="345" y2="115" class="d-hub"/>
+            <line x1="270" y1="191" x2="345" y2="160" class="d-hub"/>
+
+            <rect x="345" y="60" width="250" height="155" rx="6" class="d-zone"/>
+            <circle cx="385" cy="95" r="8" class="d-person"/>
+            <line x1="385" y1="103" x2="385" y2="128" class="d-person"/>
+            <line x1="371" y1="112" x2="399" y2="112" class="d-person"/>
+            <line x1="385" y1="128" x2="374" y2="145" class="d-person"/>
+            <line x1="385" y1="128" x2="396" y2="145" class="d-person"/>
+            <text x="490" y="92" class="d-label" text-anchor="middle">Technicien sur site</text>
+            <text x="490" y="112" class="d-sub" text-anchor="middle">Installation · brassage</text>
+            <text x="490" y="130" class="d-sub" text-anchor="middle">Contrôles physiques</text>
+            <text x="490" y="150" class="d-sub" text-anchor="middle">Rattaché au client ou à l'intégrateur</text>
+            <text x="470" y="172" class="d-sub" text-anchor="middle">Procédure illustrée pas à pas</text>
+            <text x="470" y="196" class="d-tag" text-anchor="middle">Un seul passage sur site</text>
+
+            <path d="M 595,120 C 630,110 640,110 670,110" class="d-voice"/>
+
+            <rect x="670" y="60" width="190" height="120" rx="6" class="d-zone"/>
+            <text x="706" y="112" class="d-sip-icon" text-anchor="middle">☎</text>
+            <text x="785" y="90" class="d-label" text-anchor="middle">Ingénieur</text>
+            <text x="785" y="108" class="d-label" text-anchor="middle">à distance</text>
+            <text x="785" y="130" class="d-sub" text-anchor="middle">Recette · tests des services</text>
+            <text x="785" y="147" class="d-sub" text-anchor="middle">Client ou intégrateur</text>
+            <text x="765" y="169" class="d-tag" text-anchor="middle">Selon les possibilités du site</text>
+
+            <rect x="40" y="256" width="820" height="58" rx="6" class="d-zone"/>
+            <text x="450" y="281" class="d-label" text-anchor="middle">Recette du site — validée par le client, ou par délégation</text>
+            <text x="450" y="299" class="d-sub" text-anchor="middle">À distance quand le site le permet · sur site sinon — puis mise en production</text>
+            <line x1="470" y1="215" x2="450" y2="256" class="d-link d-ha"/>
+            <line x1="765" y1="180" x2="700" y2="256" class="d-link d-ha"/>
+          </svg>
+        </figure>
       </div>
     </section>
 
