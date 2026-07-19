@@ -346,6 +346,14 @@ a:hover { text-decoration: underline; }
 .d-sub { fill: #8aa9c4; font-size: 11px; font-family: "Segoe UI", sans-serif; }
 .d-tag { fill: #ffcc66; font-size: 11px; font-weight: 600; font-family: "Segoe UI", sans-serif; }
 .d-purple { fill: #cbb8ea; font-size: 12px; font-family: "Segoe UI", sans-serif; }
+.d-srv { fill: rgba(79, 195, 247, 0.12); stroke: #4fc3f7; stroke-width: 1.2; }
+.d-srv-led { fill: #4fc3f7; }
+.d-aws { fill: rgba(255, 153, 0, 0.06); stroke: #ff9900; stroke-width: 1.5; }
+.d-aws-icon { fill: #ff9900; }
+.d-aws-logo { fill: #081527; font-size: 11px; font-weight: 700; font-family: "Segoe UI", sans-serif; }
+.d-aws-vpc { fill: none; stroke: #ff9900; stroke-width: 1.2; stroke-dasharray: 5 4; }
+.d-sip { fill: rgba(38, 198, 218, 0.08); stroke: #26c6da; stroke-width: 1.5; }
+.d-sip-icon { fill: #26c6da; font-size: 22px; }
 
 /* ===== Steps ===== */
 .steps {
@@ -577,7 +585,7 @@ a:hover { text-decoration: underline; }
 
   /* Schéma d'architecture : défilement horizontal pour rester lisible */
   .architecture { padding: 20px 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .architecture svg { min-width: 640px; }
+  .architecture svg { min-width: 760px; }
 }
 
 @media (max-width: 480px) {

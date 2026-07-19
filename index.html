@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infrarch — Ingénierie Réseau &amp; Sécurité</title>
   <meta name="description" content="Infrarch, bureau d'étude en ingénierie réseau et cybersécurité : conception d'architectures, audits, sécurisation d'infrastructures et accompagnement de projets.">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
@@ -136,13 +136,14 @@
 
         <figure class="architecture">
           <figcaption>Architecture SD-WAN Hub &amp; Spoke — ≈ 2 000 sites spoke déployés par vagues (vue simplifiée)</figcaption>
-          <svg viewBox="0 0 900 505" role="img" aria-label="Schéma SD-WAN : deux datacenters hubs redondés reliés par une interconnexion, un underlay Internet MPLS 4G/5G et un overlay de tunnels SD-WAN chiffrés desservant différents gabarits de sites spoke, avec flux directs de site à site">
+          <svg viewBox="0 0 1020 505" role="img" aria-label="Schéma SD-WAN : deux datacenters hubs redondés avec serveurs, reliés par une interconnexion, un underlay Internet MPLS 4G/5G et un overlay de tunnels SD-WAN chiffrés desservant différents gabarits de sites spoke, un tenant AWS, un trunk SIP opérateur, avec flux directs de site à site">
             <defs>
               <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                 <path d="M0,0 L6,3 L0,6 z" fill="#ef9a9a"/>
               </marker>
             </defs>
 
+            <g transform="translate(60,0)">
             <!-- Datacenters / Hubs -->
             <rect x="60" y="16" width="250" height="80" rx="6" class="d-core"/>
             <text x="185" y="38" class="d-label" text-anchor="middle">Datacenter 1 — Hub SD-WAN</text>
@@ -151,6 +152,12 @@
             <rect x="192" y="64" width="38" height="22" rx="3" class="d-fw"/>
             <line x1="178" y1="70" x2="192" y2="80" class="d-link"/>
             <line x1="178" y1="80" x2="192" y2="70" class="d-link"/>
+            <rect x="255" y="60" width="30" height="9" rx="2" class="d-srv"/>
+            <rect x="255" y="71" width="30" height="9" rx="2" class="d-srv"/>
+            <rect x="255" y="82" width="30" height="9" rx="2" class="d-srv"/>
+            <circle cx="261" cy="64.5" r="1.4" class="d-srv-led"/>
+            <circle cx="261" cy="75.5" r="1.4" class="d-srv-led"/>
+            <circle cx="261" cy="86.5" r="1.4" class="d-srv-led"/>
 
             <rect x="590" y="16" width="250" height="80" rx="6" class="d-core"/>
             <text x="715" y="38" class="d-label" text-anchor="middle">Datacenter 2 — Hub SD-WAN</text>
@@ -159,6 +166,12 @@
             <rect x="722" y="64" width="38" height="22" rx="3" class="d-fw"/>
             <line x1="708" y1="70" x2="722" y2="80" class="d-link"/>
             <line x1="708" y1="80" x2="722" y2="70" class="d-link"/>
+            <rect x="785" y="60" width="30" height="9" rx="2" class="d-srv"/>
+            <rect x="785" y="71" width="30" height="9" rx="2" class="d-srv"/>
+            <rect x="785" y="82" width="30" height="9" rx="2" class="d-srv"/>
+            <circle cx="791" cy="64.5" r="1.4" class="d-srv-led"/>
+            <circle cx="791" cy="75.5" r="1.4" class="d-srv-led"/>
+            <circle cx="791" cy="86.5" r="1.4" class="d-srv-led"/>
 
             <line x1="310" y1="56" x2="590" y2="56" class="d-link d-ha"/>
             <text x="450" y="48" class="d-sub" text-anchor="middle">Interconnexion inter-DC</text>
@@ -211,6 +224,24 @@
             <text x="368" y="486" class="d-sub">Site ↔ site (direct)</text>
             <line x1="620" y1="482" x2="660" y2="482" class="d-link d-ha"/>
             <text x="668" y="486" class="d-sub">Interconnexion inter-DC</text>
+            </g>
+
+            <!-- Trunk SIP (gauche) -->
+            <rect x="10" y="155" width="140" height="86" rx="6" class="d-sip"/>
+            <text x="80" y="180" class="d-label" text-anchor="middle">Trunk SIP</text>
+            <text x="80" y="197" class="d-sub" text-anchor="middle">Opérateur · ToIP</text>
+            <text x="80" y="226" class="d-sip-icon" text-anchor="middle">☎</text>
+            <line x1="150" y1="198" x2="180" y2="198" class="d-hub"/>
+
+            <!-- Tenant AWS (droite) -->
+            <rect x="866" y="150" width="144" height="96" rx="4" class="d-aws"/>
+            <rect x="866" y="150" width="30" height="26" class="d-aws-icon"/>
+            <text x="881" y="167" class="d-aws-logo" text-anchor="middle">aws</text>
+            <text x="904" y="167" class="d-label">Tenant AWS</text>
+            <rect x="876" y="186" width="124" height="50" rx="3" class="d-aws-vpc"/>
+            <text x="938" y="206" class="d-label" text-anchor="middle">VPC</text>
+            <text x="938" y="223" class="d-sub" text-anchor="middle">Applications hébergées</text>
+            <line x1="840" y1="198" x2="866" y2="198" class="d-hub"/>
           </svg>
         </figure>
       </div>
@@ -223,22 +254,22 @@
         <h2>Une démarche d'ingénierie structurée</h2>
         <div class="steps">
           <div class="step">
-            <span class="step-num">01</span>
+            <span class="step-num">Phase 1</span>
             <h3>Cadrage &amp; audit</h3>
             <p>Recueil des besoins, audit de l'existant, cartographie des flux et analyse de risques.</p>
           </div>
           <div class="step">
-            <span class="step-num">02</span>
+            <span class="step-num">Phase 2</span>
             <h3>Conception</h3>
             <p>Dossier d'architecture technique, choix des équipements, matrices de flux, plan d'adressage.</p>
           </div>
           <div class="step">
-            <span class="step-num">03</span>
+            <span class="step-num">Phase 3</span>
             <h3>Déploiement</h3>
             <p>Maquettage, migration par vagues, procédures de retour arrière, recette contradictoire.</p>
           </div>
           <div class="step">
-            <span class="step-num">04</span>
+            <span class="step-num">Phase 4</span>
             <h3>Exploitation</h3>
             <p>Supervision, documentation, transfert de compétences et amélioration continue.</p>
           </div>
