@@ -302,6 +302,10 @@
             <text x="938" y="206" class="d-label" text-anchor="middle">VPC</text>
             <text x="938" y="223" class="d-sub" text-anchor="middle">Applications hébergées</text>
 
+            <!-- Liens underlay vers Trunk SIP et Tenant AWS -->
+            <line x1="155" y1="198" x2="180" y2="198" class="d-hub"/>
+            <line x1="840" y1="198" x2="866" y2="198" class="d-hub"/>
+
             <!-- Flux voix du site moyen débit vers Trunk SIP (via l'anneau underlay, sans toucher l'overlay), miroir exact du flux AWS -->
             <path d="M 398,376 C 385,325 350,255 310,245 C 260,232 200,214 155,198" class="d-voice"/>
             <!-- Flux applicatif du site critique vers AWS (via l'anneau underlay, sans toucher l'overlay) -->
