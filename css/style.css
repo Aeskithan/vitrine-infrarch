@@ -332,8 +332,14 @@ a:hover { text-decoration: underline; }
 .d-zone-ot { stroke: #ffb74d; fill: rgba(255, 183, 77, 0.08); }
 .d-link { stroke: #8aa9c4; stroke-width: 1.5; fill: none; }
 .d-ha { stroke-dasharray: 3 3; }
+.d-underlay { fill: rgba(239, 83, 80, 0.10); stroke: #ef5350; stroke-width: 1.5; }
+.d-overlay { fill: rgba(179, 157, 219, 0.06); stroke: #b39ddb; stroke-width: 1.5; stroke-dasharray: 6 5; }
+.d-hub { stroke: rgba(239, 154, 154, 0.75); stroke-width: 1.5; fill: none; }
+.d-s2s { stroke: #b39ddb; stroke-width: 4; fill: none; opacity: 0.75; stroke-linecap: round; }
 .d-label { fill: #e3eef7; font-size: 13px; font-family: "Segoe UI", sans-serif; }
 .d-sub { fill: #8aa9c4; font-size: 11px; font-family: "Segoe UI", sans-serif; }
+.d-tag { fill: #ffcc66; font-size: 11px; font-weight: 600; font-family: "Segoe UI", sans-serif; }
+.d-purple { fill: #cbb8ea; font-size: 12px; font-family: "Segoe UI", sans-serif; }
 
 /* ===== Steps ===== */
 .steps {
