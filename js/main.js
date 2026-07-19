@@ -19,7 +19,7 @@ const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 const submitBtn = document.getElementById('formSubmit');
 
-form.addEventListener('submit', async (e) => {
+if (form) form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!form.checkValidity()) {
     form.reportValidity();

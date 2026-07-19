@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations — INFRARCH</title>
+  <meta name="description" content="Sélection de projets d'ingénierie réseau et sécurité menés par INFRARCH : renouvellement de parcs multi-pays, déploiements SD-WAN, automatisation. Études de cas anonymisées.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0c0e">
+  <link rel="canonical" href="https://www.infrarch.fr/realisations.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="INFRARCH">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://www.infrarch.fr/realisations.html">
+  <meta property="og:title" content="Réalisations — INFRARCH">
+  <meta property="og:description" content="Études de cas anonymisées : renouvellement de parcs réseau multi-pays, déploiements SD-WAN, automatisation et industrialisation.">
+  <meta property="og:image" content="https://www.infrarch.fr/assets/logo-web-transparent.png">
+  <link rel="stylesheet" href="css/style.css?v=21">
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="32" height="37">
+        <span class="brand-text">
+          <span class="brand-name">INFRARCH</span>
+          <span class="brand-tagline">Network, Security &amp; Automation</span>
+        </span>
+      </a>
+      <nav class="site-nav" id="nav">
+        <a href="index.html#expertises">Expertises</a>
+        <a href="index.html#methode">Méthodologie</a>
+        <a href="index.html#fondateur">À propos</a>
+        <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">Réalisations</p>
+        <h2>Une sélection de projets menés au forfait</h2>
+        <p class="section-intro">
+          Chaque mission présentée ici a été réellement menée, avec engagement de résultat.
+          Les clients et certains détails sont anonymisés par respect de la confidentialité —
+          le contexte, la démarche et les résultats sont fidèles.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Réalisation 1 ===== -->
+    <section class="section section-alt" id="realisation-1">
+      <div class="container">
+        <p class="section-kicker">Immobilier commercial · France, Italie, Espagne</p>
+        <h2>Renouvellement du parc réseau d'une foncière européenne de centres commerciaux</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Une foncière européenne exploitant des centres commerciaux en France, en Italie et en
+              Espagne devait remplacer l'ensemble de ses équipements réseau de site — routeurs
+              SD-WAN et bornes Wi-Fi d'une solution cloud-managed arrivant en fin de support —
+              sans perturber l'activité des commerces ni les services numériques des galeries
+              (Wi-Fi visiteurs, comptage de flux, affichage).
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Cartographie du parc existant et définition de la configuration cible par typologie de site</li>
+              <li>Génération automatisée des configurations : scripts de préparation, de bascule et de contrôle développés sur mesure</li>
+              <li>Contrôles avant/après systématiques : état des ports, équipements raccordés, services critiques testés à distance</li>
+              <li>Bascules réalisées en plages de maintenance, avec procédure de retour arrière par site</li>
+              <li>Coordination des techniciens locaux dans les trois pays via des procédures illustrées, sans déplacement de l'ingénierie</li>
+              <li>Suivi de campagne : tableau de bord d'avancement et traitement des cas particuliers site par site</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Industrialisation de la bascule (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 330" role="img" aria-label="Schéma de la campagne de remplacement : ingénierie centrale générant les configurations et contrôles, techniciens locaux réalisant les bascules par vagues dans trois pays">
+            <!-- Ingénierie centrale -->
+            <rect x="330" y="16" width="240" height="76" rx="6" class="d-zone"/>
+            <text x="450" y="40" class="d-label" text-anchor="middle">Ingénierie INFRARCH</text>
+            <text x="450" y="57" class="d-sub" text-anchor="middle">Configurations générées par script</text>
+            <text x="450" y="74" class="d-sub" text-anchor="middle">Contrôles avant / après à distance</text>
+
+            <!-- Flèches vers les vagues -->
+            <line x1="380" y1="92" x2="180" y2="170" class="d-hub"/>
+            <line x1="450" y1="92" x2="450" y2="170" class="d-hub"/>
+            <line x1="520" y1="92" x2="720" y2="170" class="d-hub"/>
+
+            <!-- Vagues pays -->
+            <rect x="70" y="170" width="220" height="60" rx="6" class="d-zone"/>
+            <text x="180" y="194" class="d-label" text-anchor="middle">Vague France</text>
+            <text x="180" y="212" class="d-sub" text-anchor="middle">Techniciens locaux · plages de maintenance</text>
+            <rect x="340" y="170" width="220" height="60" rx="6" class="d-zone"/>
+            <text x="450" y="194" class="d-label" text-anchor="middle">Vague Italie</text>
+            <text x="450" y="212" class="d-sub" text-anchor="middle">Procédures illustrées · retour arrière prêt</text>
+            <rect x="610" y="170" width="220" height="60" rx="6" class="d-zone"/>
+            <text x="720" y="194" class="d-label" text-anchor="middle">Vague Espagne</text>
+            <text x="720" y="212" class="d-sub" text-anchor="middle">Contrôle à distance de chaque bascule</text>
+
+            <!-- Bandeau résultat -->
+            <line x1="180" y1="230" x2="180" y2="268" class="d-link d-ha"/>
+            <line x1="450" y1="230" x2="450" y2="268" class="d-link d-ha"/>
+            <line x1="720" y1="230" x2="720" y2="268" class="d-link d-ha"/>
+            <rect x="70" y="268" width="760" height="46" rx="6" class="d-zone"/>
+            <text x="450" y="290" class="d-label" text-anchor="middle">Parc renouvelé — anciens équipements remplacés site par site</text>
+            <text x="450" y="306" class="d-tag" text-anchor="middle">Wi-Fi visiteurs · SD-WAN · services des galeries maintenus</text>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ce projet illustre : la capacité d'INFRARCH à industrialiser un remplacement de
+          parc multi-pays — scripts de génération et de contrôle, procédures pour les équipes
+          terrain, et interruptions cantonnées aux plages de maintenance convenues.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+      <div class="container">
+        <p class="section-intro" style="margin-bottom: 20px;">
+          D'autres réalisations seront publiées prochainement : déploiements SD-WAN,
+          sécurisation d'établissements de santé, infrastructures de collectivités…
+        </p>
+        <a class="btn btn-primary" href="index.html#contact">Discuter de votre projet</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">
+        <img src="assets/logo-mark-white.svg" alt="" width="22" height="25">
+        © 2026 INFRARCH — Network, Security &amp; Automation
+      </p>
+      <p class="footer-links">
+        <a href="index.html">Accueil</a> ·
+        <a href="index.html#contact">Contact</a> ·
+        <a href="mentions-legales.html">Mentions légales</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
