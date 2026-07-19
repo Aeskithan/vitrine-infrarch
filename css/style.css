@@ -332,7 +332,7 @@ a:hover { text-decoration: underline; }
 .architecture svg { width: 100%; height: auto; display: block; }
 
 .d-cloud { fill: none; stroke: #93a0a9; stroke-width: 1.5; stroke-dasharray: 5 4; }
-.d-fw { fill: rgba(239, 83, 80, 0.15); stroke: #ef5350; stroke-width: 1.5; }
+.d-fw { fill: rgba(0, 126, 189, 0.25); stroke: #38a9dd; stroke-width: 1.5; }
 .d-core { fill: rgba(0, 126, 189, 0.15); stroke: var(--blue-400); stroke-width: 1.5; }
 .d-zone { fill: rgba(255, 255, 255, 0.05); stroke: #93a0a9; stroke-width: 1.2; }
 .d-zone-ot { stroke: #ffb74d; fill: rgba(255, 183, 77, 0.08); }
