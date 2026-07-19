@@ -128,12 +128,414 @@
       </div>
     </section>
 
+    <!-- ===== Réalisation 2 : Hôtellerie ===== -->
+    <section class="section" id="realisation-2">
+      <div class="container">
+        <p class="section-kicker">Hôtellerie · Chaîne nationale</p>
+        <h2>Industrialisation du réseau d'une chaîne hôtelière</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Une chaîne hôtelière nationale équipait ses établissements au fil de l'eau, avec des
+              configurations hétérogènes et des interventions longues à chaque ouverture ou
+              rénovation. L'objectif : standardiser le socle réseau de chaque hôtel — pare-feu,
+              commutation, Wi-Fi clients avec portail captif — et industrialiser sa mise en service.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Définition d'un gabarit de configuration unique par hôtel : segmentation clients / personnel / services, qualité de service</li>
+              <li>Développement d'un portail captif Wi-Fi personnalisé aux couleurs de l'enseigne</li>
+              <li>Chaîne de staging automatisée : scripts d'enrôlement des équipements, configuration injectée avant expédition</li>
+              <li>Maîtrise de la bande passante : politique de trafic shaping par usage</li>
+              <li>Montée de version de la plateforme d'orchestration centrale sans interruption des hôtels</li>
+              <li>Procédure de mise en service simplifiée : brancher, vérifier, ouvrir</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Chaîne d'industrialisation (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 310" role="img" aria-label="Schéma : plateforme de staging préparant des équipements pré-configurés expédiés aux hôtels, avec orchestration centralisée">
+            <rect x="40" y="60" width="230" height="76" rx="6" class="d-zone"/>
+            <text x="155" y="88" class="d-label" text-anchor="middle">Plateforme de staging</text>
+            <text x="155" y="106" class="d-sub" text-anchor="middle">Enrôlement scripté · gabarit unique</text>
+
+            <line x1="270" y1="98" x2="330" y2="98" class="d-hub"/>
+            <rect x="330" y="60" width="230" height="76" rx="6" class="d-zone"/>
+            <text x="445" y="88" class="d-label" text-anchor="middle">Équipements pré-configurés</text>
+            <text x="445" y="106" class="d-sub" text-anchor="middle">Expédiés directement à l'hôtel</text>
+
+            <line x1="560" y1="98" x2="620" y2="98" class="d-hub"/>
+            <rect x="620" y="34" width="240" height="128" rx="6" class="d-zone"/>
+            <text x="740" y="58" class="d-label" text-anchor="middle">Hôtel</text>
+            <text x="740" y="80" class="d-sub" text-anchor="middle">Wi-Fi clients — portail captif</text>
+            <text x="740" y="98" class="d-sub" text-anchor="middle">Réseau personnel &amp; gestion</text>
+            <text x="740" y="116" class="d-sub" text-anchor="middle">TV &amp; services connectés</text>
+            <text x="740" y="140" class="d-tag" text-anchor="middle">Brancher · vérifier · ouvrir</text>
+
+            <rect x="40" y="210" width="820" height="60" rx="6" class="d-zone"/>
+            <text x="450" y="236" class="d-label" text-anchor="middle">Orchestration centralisée</text>
+            <text x="450" y="254" class="d-sub" text-anchor="middle">Supervision · montées de version · politiques de trafic uniformes</text>
+            <line x1="155" y1="136" x2="200" y2="210" class="d-link d-ha"/>
+            <line x1="740" y1="162" x2="700" y2="210" class="d-link d-ha"/>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ce projet illustre : transformer un déploiement artisanal en chaîne
+          industrielle — un gabarit, des scripts, et des mises en service qui ne dépendent
+          plus d'un expert sur place.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Réalisation 3 : Santé ===== -->
+    <section class="section section-alt" id="realisation-3">
+      <div class="container">
+        <p class="section-kicker">Santé · Groupement hospitalier de territoire</p>
+        <h2>Interconnexion sécurisée d'établissements hospitaliers</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Dans le cadre d'un groupement hospitalier de territoire, un centre hospitalier
+              universitaire (établissement support) devait interconnecter de façon sécurisée
+              plusieurs centres hospitaliers périphériques : convergence des systèmes d'information
+              de santé, continuité de service 24/7 et encadrement strict des accès des prestataires
+              extérieurs.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Architecture hub &amp; spoke : l'établissement support en cœur, tunnels IPsec vers chaque établissement périphérique</li>
+              <li>Configuration des pare-feux de tête et des équipements de chaque site</li>
+              <li>Segmentation des flux inter-établissements : SI de santé, administratif, téléphonie</li>
+              <li>Mise en conformité des accès distants prestataires : point d'entrée unique, traçabilité, chartes d'accès</li>
+              <li>Bascules réalisées en plages de maintenance validées avec les équipes biomédicales</li>
+              <li>Documentation d'exploitation remise aux équipes informatiques du groupement</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Interconnexion du groupement (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 330" role="img" aria-label="Schéma : centre hospitalier support relié par tunnels IPsec à trois établissements périphériques, avec accès prestataires encadrés">
+            <rect x="330" y="20" width="240" height="70" rx="6" class="d-zone"/>
+            <text x="450" y="46" class="d-label" text-anchor="middle">CHU — établissement support</text>
+            <text x="450" y="64" class="d-sub" text-anchor="middle">Pare-feux de tête · SI de santé mutualisé</text>
+
+            <path d="M 400,90 L 170,160" class="d-ipsec"/>
+            <path d="M 450,90 L 450,160" class="d-ipsec"/>
+            <path d="M 500,90 L 730,160" class="d-ipsec"/>
+            <text x="450" y="130" class="d-purple" text-anchor="middle">Tunnels IPsec</text>
+
+            <rect x="60" y="160" width="220" height="64" rx="6" class="d-zone"/>
+            <text x="170" y="186" class="d-label" text-anchor="middle">CH périphérique</text>
+            <text x="170" y="204" class="d-sub" text-anchor="middle">Segmentation locale · continuité 24/7</text>
+            <rect x="340" y="160" width="220" height="64" rx="6" class="d-zone"/>
+            <text x="450" y="186" class="d-label" text-anchor="middle">CH périphérique</text>
+            <text x="450" y="204" class="d-sub" text-anchor="middle">SI santé · administratif · téléphonie</text>
+            <rect x="620" y="160" width="220" height="64" rx="6" class="d-zone"/>
+            <text x="730" y="186" class="d-label" text-anchor="middle">CH périphérique</text>
+            <text x="730" y="204" class="d-sub" text-anchor="middle">Bascule en plage de maintenance</text>
+
+            <rect x="60" y="256" width="780" height="54" rx="6" class="d-zone"/>
+            <text x="450" y="280" class="d-label" text-anchor="middle">Accès prestataires encadrés</text>
+            <text x="450" y="298" class="d-sub" text-anchor="middle">Point d'entrée unique · traçabilité · chartes d'accès distants</text>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ce projet illustre : la sécurisation d'environnements critiques où la
+          continuité de service ne se négocie pas — et où chaque accès extérieur doit être
+          tracé et maîtrisé.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Réalisation 4 : Grande distribution ===== -->
+    <section class="section" id="realisation-4">
+      <div class="container">
+        <p class="section-kicker">Grande distribution · Enseignes nationales</p>
+        <h2>Conception SD-WAN pour des enseignes de distribution</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Plusieurs enseignes nationales de distribution — des centaines de magasins chacune —
+              ont fait évoluer leur WAN historique vers le SD-WAN. Notre rôle : produire
+              l'ingénierie de conception qui rend ces migrations possibles à grande échelle,
+              du dossier d'architecture jusqu'aux cahiers de tests.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Dossiers de conception technique (DTC) et dossiers bas niveau (LLD) validés avec les équipes du client</li>
+              <li>Maquettage et preuve de concept : validation des cas d'usage SD-WAN avant engagement</li>
+              <li>Plans d'adressage normalisés pour l'ensemble des magasins</li>
+              <li>Politiques de qualité de service en datacenter et en magasin</li>
+              <li>Conception du routage (BGP) entre datacenters, magasins et sorties Internet</li>
+              <li>Cahiers de tests exhaustifs : chaque scénario de panne joué et documenté avant le déploiement</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Du dossier de conception au déploiement (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 300" role="img" aria-label="Schéma : datacenters de l'enseigne reliés par SD-WAN aux magasins, sur la base de dossiers de conception, plans d'adressage et cahiers de tests">
+            <rect x="60" y="40" width="240" height="80" rx="6" class="d-zone"/>
+            <text x="180" y="68" class="d-label" text-anchor="middle">Datacenters de l'enseigne</text>
+            <text x="180" y="86" class="d-sub" text-anchor="middle">QoS · routage BGP · sorties sécurisées</text>
+
+            <ellipse cx="450" cy="80" rx="90" ry="34" class="d-underlay"/>
+            <text x="450" y="85" class="d-label" text-anchor="middle">SD-WAN</text>
+
+            <rect x="600" y="40" width="240" height="80" rx="6" class="d-zone"/>
+            <text x="720" y="68" class="d-label" text-anchor="middle">Magasins — centaines de sites</text>
+            <text x="720" y="86" class="d-sub" text-anchor="middle">Plan d'adressage normalisé · gabarits</text>
+
+            <line x1="300" y1="80" x2="360" y2="80" class="d-hub"/>
+            <line x1="540" y1="80" x2="600" y2="80" class="d-hub"/>
+
+            <rect x="60" y="180" width="240" height="70" rx="6" class="d-zone"/>
+            <text x="180" y="206" class="d-label" text-anchor="middle">Preuve de concept</text>
+            <text x="180" y="224" class="d-sub" text-anchor="middle">Cas d'usage validés en maquette</text>
+            <rect x="330" y="180" width="240" height="70" rx="6" class="d-zone"/>
+            <text x="450" y="206" class="d-label" text-anchor="middle">Dossiers DTC &amp; LLD</text>
+            <text x="450" y="224" class="d-sub" text-anchor="middle">Architecture validée avec le client</text>
+            <rect x="600" y="180" width="240" height="70" rx="6" class="d-zone"/>
+            <text x="720" y="206" class="d-label" text-anchor="middle">Cahiers de tests</text>
+            <text x="720" y="224" class="d-sub" text-anchor="middle">Scénarios de panne joués et documentés</text>
+
+            <line x1="180" y1="120" x2="180" y2="180" class="d-link d-ha"/>
+            <line x1="450" y1="114" x2="450" y2="180" class="d-link d-ha"/>
+            <line x1="720" y1="120" x2="720" y2="180" class="d-link d-ha"/>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ces projets illustrent : une migration de centaines de magasins réussit
+          d'abord sur le papier — conception rigoureuse, maquettage, et des tests joués
+          avant la première bascule.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Réalisation 5 : Collectivités ===== -->
+    <section class="section section-alt" id="realisation-5">
+      <div class="container">
+        <p class="section-kicker">Secteur public · Départements, métropole, services de secours</p>
+        <h2>Refonte de la sécurité réseau de collectivités</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Conseils départementaux, métropole, service départemental d'incendie et de secours :
+              des infrastructures qui portent des missions de service public, souvent bâties sur des
+              pare-feux d'ancienne génération en fin de support, et des équipes internes qui doivent
+              rester autonomes après le projet.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Audit de l'existant : configurations, flux réels, points de fragilité — restitué en rapport actionnable</li>
+              <li>Migration de pare-feux historiques vers des plateformes nouvelle génération, matrices de flux reconstruites au plus juste</li>
+              <li>Reprise du routage (BGP) et des interconnexions opérateurs sans coupure des services aux usagers</li>
+              <li>Dossiers techniques complets : conception (DTC), réalisation (DTR), dossier d'exploitation</li>
+              <li>Bascules planifiées hors horaires de service, retour arrière préparé</li>
+              <li>Transfert de compétences formalisé : ateliers et supports remis aux équipes internes</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Démarche type d'une refonte (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 190" role="img" aria-label="Schéma de la démarche : audit, conception, migration, transfert de compétences">
+            <rect x="40" y="40" width="185" height="80" rx="6" class="d-zone"/>
+            <text x="132" y="68" class="d-label" text-anchor="middle">1. Audit</text>
+            <text x="132" y="86" class="d-sub" text-anchor="middle">Configurations · flux réels</text>
+            <text x="132" y="102" class="d-sub" text-anchor="middle">Rapport actionnable</text>
+
+            <line x1="225" y1="80" x2="253" y2="80" class="d-hub"/>
+            <rect x="253" y="40" width="185" height="80" rx="6" class="d-zone"/>
+            <text x="345" y="68" class="d-label" text-anchor="middle">2. Conception</text>
+            <text x="345" y="86" class="d-sub" text-anchor="middle">Matrices de flux · DTC</text>
+            <text x="345" y="102" class="d-sub" text-anchor="middle">Architecture cible</text>
+
+            <line x1="438" y1="80" x2="466" y2="80" class="d-hub"/>
+            <rect x="466" y="40" width="185" height="80" rx="6" class="d-zone"/>
+            <text x="558" y="68" class="d-label" text-anchor="middle">3. Migration</text>
+            <text x="558" y="86" class="d-sub" text-anchor="middle">Bascules hors service</text>
+            <text x="558" y="102" class="d-sub" text-anchor="middle">Retour arrière préparé</text>
+
+            <line x1="651" y1="80" x2="679" y2="80" class="d-hub"/>
+            <rect x="679" y="40" width="185" height="80" rx="6" class="d-zone"/>
+            <text x="771" y="68" class="d-label" text-anchor="middle">4. Transfert</text>
+            <text x="771" y="86" class="d-sub" text-anchor="middle">Ateliers · DTR · exploitation</text>
+            <text x="771" y="102" class="d-sub" text-anchor="middle">Équipes autonomes</text>
+
+            <text x="450" y="160" class="d-tag" text-anchor="middle">Objectif : des équipes internes autonomes sur une plateforme moderne</text>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ces projets illustrent : dans le secteur public, la réussite se mesure
+          autant à la migration elle-même qu'à l'autonomie des équipes après notre départ.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Réalisation 6 : Enseignement & recherche ===== -->
+    <section class="section" id="realisation-6">
+      <div class="container">
+        <p class="section-kicker">Enseignement supérieur &amp; recherche</p>
+        <h2>Évolution des réseaux de campus universitaires</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Universités, grandes écoles et organismes de recherche : des campus aux dizaines de
+              bâtiments, des interconnexions accumulées au fil des années et rarement documentées,
+              et des populations aux besoins très différents — enseignement, laboratoires,
+              résidences, administration.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Inventaire exhaustif des interconnexions existantes, reconstruit par collecte automatisée (scripts)</li>
+              <li>Cartographie de l'architecture réelle — souvent différente de la documentation disponible</li>
+              <li>Conception de l'architecture cible : cœur de réseau redondé, segmentation par population</li>
+              <li>Sécurisation des environnements sensibles : laboratoires, plateformes de recherche</li>
+              <li>Plan de migration par bâtiment, compatible avec le calendrier universitaire</li>
+              <li>Restitution documentée : chaque lien, chaque VLAN, chaque exception tracée</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Architecture campus (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 300" role="img" aria-label="Schéma : cœur de réseau campus redondé desservant les bâtiments d'enseignement, les laboratoires et les résidences, avec collecte automatisée de l'existant">
+            <rect x="310" y="24" width="280" height="66" rx="6" class="d-zone"/>
+            <text x="450" y="50" class="d-label" text-anchor="middle">Cœur de réseau campus</text>
+            <text x="450" y="68" class="d-sub" text-anchor="middle">Redondé · segmentation par population</text>
+
+            <line x1="380" y1="90" x2="170" y2="160" class="d-hub"/>
+            <line x1="450" y1="90" x2="450" y2="160" class="d-hub"/>
+            <line x1="520" y1="90" x2="730" y2="160" class="d-hub"/>
+
+            <rect x="60" y="160" width="220" height="64" rx="6" class="d-zone"/>
+            <text x="170" y="186" class="d-label" text-anchor="middle">Bâtiments d'enseignement</text>
+            <text x="170" y="204" class="d-sub" text-anchor="middle">Étudiants · personnels · Wi-Fi</text>
+            <rect x="340" y="160" width="220" height="64" rx="6" class="d-zone"/>
+            <text x="450" y="186" class="d-label" text-anchor="middle">Laboratoires &amp; recherche</text>
+            <text x="450" y="204" class="d-sub" text-anchor="middle">Environnements sensibles isolés</text>
+            <rect x="620" y="160" width="220" height="64" rx="6" class="d-zone"/>
+            <text x="730" y="186" class="d-label" text-anchor="middle">Résidences &amp; services</text>
+            <text x="730" y="204" class="d-sub" text-anchor="middle">Administration · vie de campus</text>
+
+            <rect x="60" y="252" width="780" height="34" rx="6" class="d-zone"/>
+            <text x="450" y="274" class="d-sub" text-anchor="middle">Inventaire des interconnexions par collecte automatisée — l'architecture réelle, pas celle supposée</text>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ces projets illustrent : avant de faire évoluer un campus, il faut le
+          connaître vraiment — nos collectes automatisées reconstruisent l'existant fait
+          de décennies de strates.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Réalisation 7 : Outillage ===== -->
+    <section class="section section-alt" id="realisation-7">
+      <div class="container">
+        <p class="section-kicker">Transverse · Automatisation</p>
+        <h2>L'outillage qui industrialise nos projets</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Un fil rouge traverse toutes nos missions : ce qui est fait deux fois mérite un outil.
+              Au fil des projets, INFRARCH a développé et éprouvé une boîte à outils d'automatisation
+              qui fiabilise les déploiements et réduit les délais — et qui bénéficie à chaque
+              nouveau client.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Ce que nous avons construit</h3>
+            <ul class="check-list">
+              <li>Générateurs de configuration : des données de collecte au fichier prêt à déployer, sans ressaisie</li>
+              <li>Générateur de documentation : les dossiers techniques (DTC, DTR) produits automatiquement depuis les données du projet</li>
+              <li>Scripts d'enrôlement et de staging pour préparer les équipements en masse</li>
+              <li>Outils de contrôle avant/après bascule : état des ports, équipements raccordés, services testés</li>
+              <li>Assistants de migration entre constructeurs : conversion des politiques existantes vers la plateforme cible</li>
+              <li>Le tout versionné, documenté et réutilisé de projet en projet</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>De la collecte aux livrables (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 280" role="img" aria-label="Schéma : les données de collecte alimentent les moteurs d'automatisation INFRARCH qui produisent configurations, documentation et rapports de contrôle">
+            <rect x="40" y="80" width="220" height="90" rx="6" class="d-zone"/>
+            <text x="150" y="108" class="d-label" text-anchor="middle">Données de collecte</text>
+            <text x="150" y="126" class="d-sub" text-anchor="middle">Matrices de flux · inventaires</text>
+            <text x="150" y="142" class="d-sub" text-anchor="middle">Plans d'adressage · existant</text>
+
+            <line x1="260" y1="125" x2="330" y2="125" class="d-hub"/>
+
+            <rect x="330" y="60" width="240" height="130" rx="6" class="d-zone"/>
+            <text x="450" y="88" class="d-label" text-anchor="middle">Moteurs INFRARCH</text>
+            <text x="450" y="110" class="d-sub" text-anchor="middle">Générateur de configurations</text>
+            <text x="450" y="128" class="d-sub" text-anchor="middle">Générateur de documentation</text>
+            <text x="450" y="146" class="d-sub" text-anchor="middle">Contrôles avant / après</text>
+            <text x="450" y="170" class="d-tag" text-anchor="middle">Python · gabarits · versionné</text>
+
+            <line x1="570" y1="90" x2="640" y2="66" class="d-hub"/>
+            <line x1="570" y1="125" x2="640" y2="125" class="d-hub"/>
+            <line x1="570" y1="160" x2="640" y2="184" class="d-hub"/>
+
+            <rect x="640" y="40" width="220" height="52" rx="6" class="d-zone"/>
+            <text x="750" y="62" class="d-label" text-anchor="middle">Configurations prêtes</text>
+            <text x="750" y="80" class="d-sub" text-anchor="middle">Zéro ressaisie · zéro oubli</text>
+            <rect x="640" y="100" width="220" height="52" rx="6" class="d-zone"/>
+            <text x="750" y="122" class="d-label" text-anchor="middle">Dossiers techniques</text>
+            <text x="750" y="140" class="d-sub" text-anchor="middle">DTC · DTR · exploitation</text>
+            <rect x="640" y="160" width="220" height="52" rx="6" class="d-zone"/>
+            <text x="750" y="182" class="d-label" text-anchor="middle">Rapports de contrôle</text>
+            <text x="750" y="200" class="d-sub" text-anchor="middle">Preuve de chaque bascule</text>
+
+            <text x="450" y="250" class="d-sub" text-anchor="middle">Chaque outil éprouvé sur un projet devient un accélérateur pour les suivants</text>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que cet outillage illustre : les « 10 000+ équipements déployés selon nos
+          standards » ne sont pas un slogan — c'est le résultat mesurable de cette
+          automatisation.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CTA ===== -->
     <section class="section">
       <div class="container">
         <p class="section-intro" style="margin-bottom: 20px;">
-          D'autres réalisations seront publiées prochainement : déploiements SD-WAN,
-          sécurisation d'établissements de santé, infrastructures de collectivités…
+          Votre contexte ressemble à l'un de ces projets — ou n'y ressemble pas du tout ?
+          Parlons-en : chaque mission commence par comprendre votre existant.
         </p>
         <a class="btn btn-primary" href="index.html#contact">Discuter de votre projet</a>
       </div>
