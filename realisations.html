@@ -278,7 +278,7 @@
           <div class="project-block">
             <h3>Notre intervention</h3>
             <ul class="check-list">
-              <li>Dossiers de conception technique (DTC) et dossiers bas niveau (LLD) validés avec les équipes du client</li>
+              <li>Dossiers de conception haut niveau (HLD) et bas niveau (LLD) validés avec les équipes du client</li>
               <li>Maquettage et preuve de concept : validation des cas d'usage SD-WAN avant engagement</li>
               <li>Plans d'adressage normalisés pour l'ensemble des magasins</li>
               <li>Politiques de qualité de service en datacenter et en magasin</li>
@@ -309,7 +309,7 @@
             <text x="180" y="206" class="d-label" text-anchor="middle">Preuve de concept</text>
             <text x="180" y="224" class="d-sub" text-anchor="middle">Cas d'usage validés en maquette</text>
             <rect x="330" y="180" width="240" height="70" rx="6" class="d-zone"/>
-            <text x="450" y="206" class="d-label" text-anchor="middle">Dossiers DTC &amp; LLD</text>
+            <text x="450" y="206" class="d-label" text-anchor="middle">Dossiers HLD &amp; LLD</text>
             <text x="450" y="224" class="d-sub" text-anchor="middle">Architecture validée avec le client</text>
             <rect x="600" y="180" width="240" height="70" rx="6" class="d-zone"/>
             <text x="720" y="206" class="d-label" text-anchor="middle">Cahiers de tests</text>
@@ -351,7 +351,7 @@
               <li>Audit de l'existant : configurations, flux réels, points de fragilité — restitué en rapport actionnable</li>
               <li>Migration de pare-feux historiques vers des plateformes nouvelle génération, matrices de flux reconstruites au plus juste</li>
               <li>Reprise du routage (BGP) et des interconnexions opérateurs sans coupure des services aux usagers</li>
-              <li>Dossiers techniques complets : conception (DTC), réalisation (DTR), dossier d'exploitation</li>
+              <li>Dossiers techniques complets : conception (HLD, LLD), réalisation (DTR), dossier d'exploitation</li>
               <li>Bascules planifiées hors horaires de service, retour arrière préparé</li>
               <li>Transfert de compétences formalisé : ateliers et supports remis aux équipes internes</li>
             </ul>
@@ -369,7 +369,7 @@
             <line x1="225" y1="80" x2="253" y2="80" class="d-hub"/>
             <rect x="253" y="40" width="185" height="80" rx="6" class="d-zone"/>
             <text x="345" y="68" class="d-label" text-anchor="middle">2. Conception</text>
-            <text x="345" y="86" class="d-sub" text-anchor="middle">Matrices de flux · DTC</text>
+            <text x="345" y="86" class="d-sub" text-anchor="middle">Matrices de flux · HLD / LLD</text>
             <text x="345" y="102" class="d-sub" text-anchor="middle">Architecture cible</text>
 
             <line x1="438" y1="80" x2="466" y2="80" class="d-hub"/>
@@ -478,7 +478,7 @@
             <h3>Ce que nous avons construit</h3>
             <ul class="check-list">
               <li>Générateurs de configuration : des données de collecte au fichier prêt à déployer, sans ressaisie</li>
-              <li>Générateur de documentation : les dossiers techniques (DTC, DTR) produits automatiquement depuis les données du projet</li>
+              <li>Générateur de documentation : les dossiers techniques (LLD, DTR) produits automatiquement depuis les données du projet</li>
               <li>Scripts d'enrôlement et de staging pour préparer les équipements en masse</li>
               <li>Outils de contrôle avant/après bascule : état des ports, équipements raccordés, services testés</li>
               <li>Assistants de migration entre constructeurs : conversion des politiques existantes vers la plateforme cible</li>
@@ -513,7 +513,7 @@
             <text x="750" y="80" class="d-sub" text-anchor="middle">Zéro ressaisie · zéro oubli</text>
             <rect x="640" y="100" width="220" height="52" rx="6" class="d-zone"/>
             <text x="750" y="122" class="d-label" text-anchor="middle">Dossiers techniques</text>
-            <text x="750" y="140" class="d-sub" text-anchor="middle">DTC · DTR · exploitation</text>
+            <text x="750" y="140" class="d-sub" text-anchor="middle">HLD · LLD · DTR</text>
             <rect x="640" y="160" width="220" height="52" rx="6" class="d-zone"/>
             <text x="750" y="182" class="d-label" text-anchor="middle">Rapports de contrôle</text>
             <text x="750" y="200" class="d-sub" text-anchor="middle">Preuve de chaque bascule</text>
@@ -530,8 +530,80 @@
       </div>
     </section>
 
+    <!-- ===== Réalisation 8 : Distribution spécialisée, partenariat dans la durée ===== -->
+    <section class="section" id="realisation-8">
+      <div class="container">
+        <p class="section-kicker">Distribution spécialisée · Enseigne nationale</p>
+        <h2>Un partenariat dans la durée : chantiers successifs sur un même parc</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Une enseigne nationale de distribution spécialisée — plusieurs centaines de points de
+              vente — nous a confié, au fil des années, l'ensemble des évolutions de son
+              infrastructure réseau. L'intérêt du modèle : la connaissance du parc acquise sur un
+              chantier accélère et fiabilise tous les suivants.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Les chantiers menés</h3>
+            <ul class="check-list">
+              <li>Migration du WAN historique vers le SD-WAN, avec intégration de la téléphonie IP des points de vente</li>
+              <li>Renouvellement du parc de commutateurs en magasin, configurations reprises et normalisées</li>
+              <li>Refonte de l'authentification Wi-Fi et fusion des plateformes de portail invités (reprise scriptée des données)</li>
+              <li>Déploiement d'un filtrage DNS cloud sur l'ensemble des sites</li>
+              <li>Assistance à appel d'offres pour le renouvellement du Wi-Fi : cadrage du besoin, analyse comparative des offres</li>
+              <li>Gestion du cycle de vie : inventaires de licences, montées de version, suivi du parc</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>Chantiers successifs sur le même parc (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 320" role="img" aria-label="Schéma : cinq chantiers successifs menés sur le parc d'une même enseigne — SD-WAN et ToIP, commutation, Wi-Fi et portail invités, filtrage DNS, assistance appel d'offres">
+            <rect x="40" y="40" width="255" height="70" rx="6" class="d-zone"/>
+            <text x="167" y="66" class="d-label" text-anchor="middle">Migration SD-WAN</text>
+            <text x="167" y="84" class="d-sub" text-anchor="middle">Téléphonie IP intégrée · vagues</text>
+
+            <rect x="322" y="40" width="255" height="70" rx="6" class="d-zone"/>
+            <text x="449" y="66" class="d-label" text-anchor="middle">Renouvellement commutation</text>
+            <text x="449" y="84" class="d-sub" text-anchor="middle">Configurations reprises · normalisées</text>
+
+            <rect x="604" y="40" width="255" height="70" rx="6" class="d-zone"/>
+            <text x="731" y="66" class="d-label" text-anchor="middle">Wi-Fi &amp; portail invités</text>
+            <text x="731" y="84" class="d-sub" text-anchor="middle">Fusion de plateformes · reprise scriptée</text>
+
+            <rect x="180" y="140" width="255" height="70" rx="6" class="d-zone"/>
+            <text x="307" y="166" class="d-label" text-anchor="middle">Filtrage DNS cloud</text>
+            <text x="307" y="184" class="d-sub" text-anchor="middle">Protection de tous les sites</text>
+
+            <rect x="462" y="140" width="255" height="70" rx="6" class="d-zone"/>
+            <text x="589" y="166" class="d-label" text-anchor="middle">Assistance appel d'offres</text>
+            <text x="589" y="184" class="d-sub" text-anchor="middle">Cadrage · analyse comparative</text>
+
+            <rect x="40" y="242" width="819" height="56" rx="6" class="d-zone"/>
+            <text x="450" y="266" class="d-label" text-anchor="middle">Un même parc — plusieurs centaines de points de vente</text>
+            <text x="450" y="284" class="d-tag" text-anchor="middle">La connaissance du terrain réutilisée à chaque chantier</text>
+
+            <line x1="167" y1="110" x2="167" y2="242" class="d-link d-ha"/>
+            <line x1="449" y1="110" x2="449" y2="242" class="d-link d-ha"/>
+            <line x1="731" y1="110" x2="731" y2="242" class="d-link d-ha"/>
+            <line x1="307" y1="210" x2="307" y2="242" class="d-link d-ha"/>
+            <line x1="589" y1="210" x2="589" y2="242" class="d-link d-ha"/>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ce partenariat illustre : au-delà des projets ponctuels, INFRARCH peut devenir
+          l'ingénierie réseau attitrée d'une enseigne — du cadrage des appels d'offres à
+          l'exploitation du parc.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CTA ===== -->
-    <section class="section">
+    <section class="section section-alt">
       <div class="container">
         <p class="section-intro" style="margin-bottom: 20px;">
           Votre contexte ressemble à l'un de ces projets — ou n'y ressemble pas du tout ?
