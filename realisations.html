@@ -332,17 +332,16 @@
     <!-- ===== Réalisation 5 : Collectivités ===== -->
     <section class="section section-alt" id="realisation-5">
       <div class="container">
-        <p class="section-kicker">Secteur public · Départements, métropole, services de secours</p>
+        <p class="section-kicker">Secteur public · Départements &amp; métropole</p>
         <h2>Refonte de la sécurité réseau de collectivités</h2>
 
         <div class="project-grid">
           <div class="project-block">
             <h3>Le contexte</h3>
             <p>
-              Conseils départementaux, métropole, service départemental d'incendie et de secours :
-              des infrastructures qui portent des missions de service public, souvent bâties sur des
-              pare-feux d'ancienne génération en fin de support, et des équipes internes qui doivent
-              rester autonomes après le projet.
+              Conseils départementaux, métropole : des infrastructures qui portent des missions de
+              service public, souvent bâties sur des pare-feux d'ancienne génération en fin de
+              support, et des équipes internes qui doivent rester autonomes après le projet.
             </p>
           </div>
           <div class="project-block">
@@ -603,8 +602,77 @@
       </div>
     </section>
 
+    <!-- ===== Réalisation 9 : Sécurité civile ===== -->
+    <section class="section section-alt" id="realisation-9">
+      <div class="container">
+        <p class="section-kicker">Sécurité civile · Service d'incendie et de secours</p>
+        <h2>Audit et remise à niveau d'un réseau critique 24/7</h2>
+
+        <div class="project-grid">
+          <div class="project-block">
+            <h3>Le contexte</h3>
+            <p>
+              Un service départemental d'incendie et de secours : des casernes réparties sur tout le
+              département et une chaîne de traitement de l'alerte qui ne peut jamais s'arrêter. Après
+              des années d'exploitation, la politique de sécurité des pare-feux s'était sédimentée —
+              des centaines de règles accumulées, dont personne ne pouvait plus garantir la
+              cohérence. Le besoin : un audit indépendant, puis une remise à niveau sans risque pour
+              la chaîne de l'alerte.
+            </p>
+          </div>
+          <div class="project-block">
+            <h3>Notre intervention</h3>
+            <ul class="check-list">
+              <li>Audit du parc de pare-feux : analyse de la politique de filtrage règle par règle</li>
+              <li>Détection systématique des règles recouvertes — masquées par d'autres et donc jamais appliquées : la politique réelle, pas celle affichée</li>
+              <li>Nettoyage : objets inutilisés supprimés, NAT regroupé, filtrage rationalisé</li>
+              <li>Création de règles dédiées aux applications métier, au plus juste</li>
+              <li>Montée de version du parc planifiée en continuité de service</li>
+              <li>Rapport d'audit actionnable, dossier de réalisation (DTR) et transfert de compétences aux équipes</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="architecture">
+          <figcaption>De la politique sédimentée à la politique maîtrisée (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 900 300" role="img" aria-label="Schéma : la politique de sécurité historique passe par un audit règle par règle qui produit une politique rationalisée, en préservant la chaîne de l'alerte 24/7">
+            <rect x="40" y="50" width="230" height="90" rx="6" class="d-zone"/>
+            <text x="155" y="80" class="d-label" text-anchor="middle">Politique historique</text>
+            <text x="155" y="98" class="d-sub" text-anchor="middle">Des centaines de règles</text>
+            <text x="155" y="114" class="d-sub" text-anchor="middle">sédimentées au fil des années</text>
+
+            <line x1="270" y1="95" x2="335" y2="95" class="d-hub"/>
+
+            <rect x="335" y="35" width="230" height="120" rx="6" class="d-zone"/>
+            <text x="450" y="62" class="d-label" text-anchor="middle">Audit règle par règle</text>
+            <text x="450" y="84" class="d-sub" text-anchor="middle">Règles recouvertes détectées</text>
+            <text x="450" y="102" class="d-sub" text-anchor="middle">Objets inutilisés identifiés</text>
+            <text x="450" y="120" class="d-sub" text-anchor="middle">NAT regroupé · flux justifiés</text>
+            <text x="450" y="142" class="d-tag" text-anchor="middle">Analyse outillée + revue experte</text>
+
+            <line x1="565" y1="95" x2="630" y2="95" class="d-hub"/>
+
+            <rect x="630" y="50" width="230" height="90" rx="6" class="d-zone"/>
+            <text x="745" y="80" class="d-label" text-anchor="middle">Politique remise à niveau</text>
+            <text x="745" y="98" class="d-sub" text-anchor="middle">Filtrage au plus juste</text>
+            <text x="745" y="114" class="d-sub" text-anchor="middle">Lisible · documenté · transmis</text>
+
+            <rect x="40" y="200" width="820" height="60" rx="6" class="d-zone"/>
+            <text x="450" y="226" class="d-label" text-anchor="middle">Chaîne de l'alerte préservée — casernes et centre d'alerte en service 24/7</text>
+            <text x="450" y="244" class="d-tag" text-anchor="middle">Interventions en continuité de service · rapport d'audit · DTR · transfert de compétences</text>
+          </svg>
+        </figure>
+
+        <div class="quote" style="margin-top: 40px;">
+          <p>Ce que ce projet illustre : sur un réseau où chaque minute d'indisponibilité peut
+          coûter des secours, la rigueur de l'audit — trouver les règles que plus personne ne
+          voyait — précède toute modification.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CTA ===== -->
-    <section class="section section-alt">
+    <section class="section">
       <div class="container">
         <p class="section-intro" style="margin-bottom: 20px;">
           Votre contexte ressemble à l'un de ces projets — ou n'y ressemble pas du tout ?
