@@ -244,10 +244,10 @@
             <text x="938" y="223" class="d-sub" text-anchor="middle">Applications hébergées</text>
             <line x1="840" y1="198" x2="866" y2="198" class="d-hub"/>
 
-            <!-- Flux voix vers Trunk SIP -->
-            <path d="M110,374 C 75,330 68,285 80,245" class="d-voice"/>
-            <!-- Flux applicatif vers AWS -->
-            <path d="M700,374 C 790,335 870,312 920,250" class="d-app"/>
+            <!-- Flux voix vers Trunk SIP (via underlay Internet) -->
+            <path d="M 140,374 C 260,280 340,220 310,202 C 280,186 210,192 150,198" class="d-voice"/>
+            <!-- Flux applicatif vers AWS (via underlay Internet) -->
+            <path d="M 640,374 C 615,300 645,235 700,215 C 760,193 810,194 866,198" class="d-app"/>
 
             <!-- Légende des flux -->
             <line x1="120" y1="509" x2="160" y2="509" class="d-voice"/>
