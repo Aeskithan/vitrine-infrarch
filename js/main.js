@@ -14,16 +14,38 @@ nav.addEventListener('click', (e) => {
   }
 });
 
-// Formulaire de contact (démo : pas de backend branché)
+// Formulaire de contact — envoi via Web3Forms (AJAX)
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
+const submitBtn = document.getElementById('formSubmit');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!form.checkValidity()) {
     form.reportValidity();
     return;
   }
-  status.textContent = 'Merci ! Votre demande a bien été enregistrée. Nous revenons vers vous rapidement.';
-  form.reset();
+
+  submitBtn.disabled = true;
+  status.textContent = 'Envoi en cours…';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    const result = await response.json();
+
+    if (result.success) {
+      status.textContent = 'Merci ! Votre demande a bien été envoyée. Nous revenons vers vous rapidement.';
+      form.reset();
+    } else {
+      status.textContent = "L'envoi a échoué. Vous pouvez nous écrire directement à contact@infrarch.fr.";
+    }
+  } catch (err) {
+    status.textContent = "L'envoi a échoué (connexion). Vous pouvez nous écrire directement à contact@infrarch.fr.";
+  } finally {
+    submitBtn.disabled = false;
+  }
 });

@@ -26,7 +26,7 @@
   <meta name="twitter:description" content="Bureau d'étude : architectures SD-WAN, audits, Fortinet, cloud AWS. Infrastructures fiables et sécurisées pour entreprises et collectivités.">
   <meta name="twitter:image" content="https://www.infrarch.fr/assets/logo-web-transparent.png">
 
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="icon" href="assets/favicon.ico">
 
   <!-- Données structurées schema.org -->
@@ -428,11 +428,14 @@
             <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/raphael-parsus/" target="_blank" rel="noopener">linkedin.com/in/raphael-parsus</a></li>
           </ul>
         </div>
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="69464670-c4dd-425e-b19a-6d0e6ba70d11">
+          <input type="hidden" name="from_name" value="Site vitrine INFRARCH">
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-row">
             <label>
               Nom
-              <input type="text" name="nom" required autocomplete="name" placeholder="Votre nom">
+              <input type="text" name="name" required autocomplete="name" placeholder="Votre nom">
             </label>
             <label>
               Email
@@ -441,7 +444,7 @@
           </div>
           <label>
             Sujet
-            <select name="sujet">
+            <select name="subject">
               <option>Projet — étude &amp; conception d'architecture</option>
               <option>Audit réseau ou sécurité</option>
               <option>Autre demande</option>
@@ -451,7 +454,7 @@
             Message
             <textarea name="message" rows="5" required placeholder="Décrivez votre contexte et votre besoin…"></textarea>
           </label>
-          <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+          <button type="submit" class="btn btn-primary" id="formSubmit">Envoyer la demande</button>
           <p class="form-status" id="formStatus" role="status"></p>
         </form>
       </div>

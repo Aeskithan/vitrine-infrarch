@@ -530,6 +530,8 @@ a:hover { text-decoration: underline; }
 }
 
 .form-status { font-size: 0.9rem; color: var(--blue-400); min-height: 1.2em; margin: 0; }
+.botcheck { display: none; }
+.contact-form button:disabled { opacity: 0.6; cursor: wait; transform: none; }
 
 /* ===== Footer ===== */
 .site-footer {
