@@ -149,7 +149,7 @@
             <ul class="check-list">
               <li>Définition d'un gabarit de configuration unique par hôtel : segmentation clients / personnel / services, qualité de service</li>
               <li>Développement d'un portail captif Wi-Fi personnalisé aux couleurs de l'enseigne</li>
-              <li>Chaîne de staging automatisée : scripts d'enrôlement des équipements, configuration injectée avant expédition</li>
+              <li>Chaîne de staging automatisée : scripts d'enrôlement des équipements, configuration injectée avant expédition — un choix volontaire face au ZTP, pour que chaque équipement parte contrôlé</li>
               <li>Maîtrise de la bande passante : politique de trafic shaping par usage</li>
               <li>Montée de version de la plateforme d'orchestration centrale sans interruption des hôtels</li>
               <li>Procédure de mise en service simplifiée : brancher, vérifier, ouvrir</li>
@@ -159,29 +159,42 @@
 
         <figure class="architecture">
           <figcaption>Chaîne d'industrialisation (vue simplifiée)</figcaption>
-          <svg viewBox="0 0 900 310" role="img" aria-label="Schéma : plateforme de staging préparant des équipements pré-configurés expédiés aux hôtels, avec orchestration centralisée">
-            <rect x="40" y="60" width="230" height="76" rx="6" class="d-zone"/>
-            <text x="155" y="88" class="d-label" text-anchor="middle">Plateforme de staging</text>
-            <text x="155" y="106" class="d-sub" text-anchor="middle">Enrôlement scripté · gabarit unique</text>
+          <svg viewBox="0 0 900 340" role="img" aria-label="Schéma : les équipements partent de l'usine de fabrication vers la plateforme de staging qui les pré-configure avant expédition aux hôtels, sous orchestration centralisée ; le passage en staging plutôt qu'en ZTP est un choix volontaire">
+            <rect x="40" y="20" width="820" height="58" rx="6" class="d-zone"/>
+            <text x="450" y="44" class="d-label" text-anchor="middle">Orchestration centralisée</text>
+            <text x="450" y="62" class="d-sub" text-anchor="middle">Supervision · montées de version · politiques de trafic uniformes</text>
 
-            <line x1="270" y1="98" x2="330" y2="98" class="d-hub"/>
-            <rect x="330" y="60" width="230" height="76" rx="6" class="d-zone"/>
-            <text x="445" y="88" class="d-label" text-anchor="middle">Équipements pré-configurés</text>
-            <text x="445" y="106" class="d-sub" text-anchor="middle">Expédiés directement à l'hôtel</text>
+            <line x1="345" y1="78" x2="345" y2="150" class="d-link d-ha"/>
+            <line x1="765" y1="78" x2="765" y2="130" class="d-link d-ha"/>
 
-            <line x1="560" y1="98" x2="620" y2="98" class="d-hub"/>
-            <rect x="620" y="34" width="240" height="128" rx="6" class="d-zone"/>
-            <text x="740" y="58" class="d-label" text-anchor="middle">Hôtel</text>
-            <text x="740" y="80" class="d-sub" text-anchor="middle">Wi-Fi clients — portail captif</text>
-            <text x="740" y="98" class="d-sub" text-anchor="middle">Réseau personnel &amp; gestion</text>
-            <text x="740" y="116" class="d-sub" text-anchor="middle">TV &amp; services connectés</text>
-            <text x="740" y="140" class="d-tag" text-anchor="middle">Brancher · vérifier · ouvrir</text>
+            <rect x="40" y="150" width="190" height="80" rx="6" class="d-zone"/>
+            <text x="135" y="180" class="d-label" text-anchor="middle">Usine de fabrication</text>
+            <text x="135" y="198" class="d-sub" text-anchor="middle">Départ des équipements neufs</text>
 
-            <rect x="40" y="210" width="820" height="60" rx="6" class="d-zone"/>
-            <text x="450" y="236" class="d-label" text-anchor="middle">Orchestration centralisée</text>
-            <text x="450" y="254" class="d-sub" text-anchor="middle">Supervision · montées de version · politiques de trafic uniformes</text>
-            <line x1="155" y1="136" x2="200" y2="210" class="d-link d-ha"/>
-            <line x1="740" y1="162" x2="700" y2="210" class="d-link d-ha"/>
+            <line x1="230" y1="190" x2="250" y2="190" class="d-hub"/>
+
+            <rect x="250" y="150" width="190" height="80" rx="6" class="d-zone"/>
+            <text x="345" y="180" class="d-label" text-anchor="middle">Centre de staging</text>
+            <text x="345" y="198" class="d-sub" text-anchor="middle">Enrôlement scripté</text>
+            <text x="345" y="214" class="d-sub" text-anchor="middle">Gabarit unique injecté</text>
+
+            <line x1="440" y1="190" x2="460" y2="190" class="d-hub"/>
+
+            <rect x="460" y="150" width="190" height="80" rx="6" class="d-zone"/>
+            <text x="555" y="180" class="d-label" text-anchor="middle">Équipements prêts</text>
+            <text x="555" y="198" class="d-sub" text-anchor="middle">Contrôlés · pré-configurés</text>
+            <text x="555" y="214" class="d-sub" text-anchor="middle">Expédiés à l'hôtel</text>
+
+            <line x1="650" y1="190" x2="670" y2="190" class="d-hub"/>
+
+            <rect x="670" y="130" width="190" height="120" rx="6" class="d-zone"/>
+            <text x="765" y="154" class="d-label" text-anchor="middle">Hôtel</text>
+            <text x="765" y="176" class="d-sub" text-anchor="middle">Wi-Fi clients — portail captif</text>
+            <text x="765" y="194" class="d-sub" text-anchor="middle">Réseau personnel &amp; gestion</text>
+            <text x="765" y="212" class="d-sub" text-anchor="middle">TV &amp; services connectés</text>
+            <text x="765" y="236" class="d-tag" text-anchor="middle">Brancher · vérifier · ouvrir</text>
+
+            <text x="450" y="300" class="d-tag" text-anchor="middle">Choix d'ingénierie volontaire : passage en centre de staging plutôt que ZTP — chaque équipement part contrôlé</text>
           </svg>
         </figure>
 
