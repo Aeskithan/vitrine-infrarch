@@ -533,6 +533,13 @@ a:hover { text-decoration: underline; }
 .botcheck { display: none; }
 .contact-form button:disabled { opacity: 0.6; cursor: wait; transform: none; }
 
+/* ===== Mentions légales ===== */
+.legal h3 { margin: 30px 0 10px; color: var(--navy-800); font-size: 1.1rem; }
+.legal p { color: var(--text-muted); max-width: 760px; margin-bottom: 12px; }
+.legal ul { list-style: none; margin: 4px 0 8px; }
+.legal li { margin-bottom: 6px; color: var(--text-muted); }
+.legal li strong { color: var(--navy-800); }
+
 /* ===== Footer ===== */
 .site-footer {
   background: var(--navy-900);
