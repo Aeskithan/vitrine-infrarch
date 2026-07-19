@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infrarch — Ingénierie Réseau &amp; Sécurité</title>
   <meta name="description" content="Infrarch, bureau d'étude en ingénierie réseau et cybersécurité : conception d'architectures, audits, sécurisation d'infrastructures et accompagnement de projets.">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
   <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
@@ -48,10 +48,6 @@
           et l'évolution de leurs infrastructures : études d'architecture, audits, déploiements et
           maintien en condition opérationnelle.
         </p>
-        <div class="hero-actions">
-          <a href="#projet" class="btn btn-primary">Découvrir un projet type</a>
-          <a href="#contact" class="btn btn-ghost">Parler à un ingénieur</a>
-        </div>
         <ul class="hero-stats">
           <li><strong>120+</strong><span>projets menés</span></li>
           <li><strong>15 ans</strong><span>d'expertise</span></li>
@@ -107,78 +103,74 @@
     <section class="section section-alt" id="projet">
       <div class="container">
         <p class="section-kicker">Projet type</p>
-        <h2>Refonte réseau &amp; sécurité d'un site industriel multi-bâtiments</h2>
+        <h2>Déploiement SD-WAN Hub &amp; Spoke sur 2 000 sites</h2>
         <p class="section-intro">
-          Exemple représentatif d'une mission menée par Infrarch : moderniser une infrastructure
-          vieillissante tout en élevant significativement le niveau de sécurité, sans interruption de production.
+          Exemple représentatif d'une mission menée par Infrarch : migrer un parc WAN de grande
+          envergure vers une architecture SD-WAN moderne, avec des coupures de service restreintes
+          à des plages de maintenance planifiées.
         </p>
 
         <div class="project-grid">
           <div class="project-block">
             <h3>Le contexte</h3>
             <p>
-              Un acteur industriel de 800 collaborateurs répartis sur 6 bâtiments disposait d'un réseau
-              à plat, d'équipements en fin de vie et d'aucune segmentation entre l'informatique de gestion
-              (IT) et les systèmes industriels (OT). Les exigences : haute disponibilité, conformité NIS2
-              et migration sans arrêt de production.
+              Un groupe multi-sites disposant d'environ 2 000 sites répartis sur le territoire
+              souhaitait remplacer son réseau WAN historique par une architecture SD-WAN
+              Hub &amp; Spoke : centralisation de la sécurité sur des hubs redondés, sites
+              distants standardisés, et un déploiement industrialisé dont les interruptions
+              restent cantonnées à des fenêtres de maintenance validées avec les métiers.
             </p>
           </div>
           <div class="project-block">
             <h3>Notre intervention</h3>
             <ul class="check-list">
-              <li>Audit complet de l'existant et cartographie des flux applicatifs</li>
-              <li>Conception d'une architecture cœur / distribution / accès redondée (spine-leaf en datacenter)</li>
-              <li>Segmentation IT / OT avec pare-feux internes et politique de flux au plus juste</li>
-              <li>Déploiement d'un NAC (802.1X) et d'un accès distant Zero Trust</li>
-              <li>Migration par vagues, de nuit, avec procédures de retour arrière testées</li>
-              <li>Supervision unifiée et dossier d'exploitation remis aux équipes internes</li>
+              <li>Audit complet de l'existant : liaisons, flux, adressage et contraintes par typologie de site</li>
+              <li>Intégration des hubs SD-WAN redondés en datacenter</li>
+              <li>Définition de la configuration cible « spoke » : gabarits standardisés par typologie de site</li>
+              <li>Phases pilotes sur un panel de sites spoke représentatifs, puis ajustement des gabarits</li>
+              <li>Déploiement massif par vagues, mené par des équipes de techniciens coordonnées et outillées</li>
+              <li>Interventions réalisées dans des plages de maintenance planifiées, avec procédures de retour arrière</li>
             </ul>
           </div>
         </div>
 
-        <div class="project-results">
-          <div class="result"><strong>0</strong><span>interruption de production pendant la migration</span></div>
-          <div class="result"><strong>−87 %</strong><span>de surface d'exposition interne après segmentation</span></div>
-          <div class="result"><strong>4 mois</strong><span>de l'étude à la mise en service</span></div>
-          <div class="result"><strong>32</strong><span>VLAN &amp; zones de sécurité documentés</span></div>
-        </div>
-
         <figure class="architecture">
-          <figcaption>Architecture cible (vue simplifiée)</figcaption>
-          <svg viewBox="0 0 860 340" role="img" aria-label="Schéma d'architecture réseau simplifié : Internet, pare-feux redondés, cœur de réseau, zones IT, OT et datacenter">
+          <figcaption>Architecture SD-WAN Hub &amp; Spoke (vue simplifiée)</figcaption>
+          <svg viewBox="0 0 860 360" role="img" aria-label="Schéma SD-WAN Hub and Spoke : transports Internet, MPLS et 4G/5G reliant deux hubs redondés en datacenter à 2 000 sites spoke standardisés">
             <defs>
               <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
                 <path d="M0,0 L6,3 L0,6 z" fill="#8aa9c4"/>
               </marker>
             </defs>
-            <!-- Internet -->
-            <ellipse cx="430" cy="36" rx="70" ry="24" class="d-cloud"/>
-            <text x="430" y="41" class="d-label" text-anchor="middle">Internet / WAN</text>
-            <!-- Firewalls -->
-            <line x1="430" y1="60" x2="430" y2="92" class="d-link"/>
-            <rect x="330" y="92" width="90" height="40" rx="6" class="d-fw"/>
-            <text x="375" y="116" class="d-label" text-anchor="middle">FW-A</text>
-            <rect x="440" y="92" width="90" height="40" rx="6" class="d-fw"/>
-            <text x="485" y="116" class="d-label" text-anchor="middle">FW-B</text>
-            <line x1="420" y1="112" x2="440" y2="112" class="d-link d-ha"/>
-            <!-- Core -->
-            <line x1="375" y1="132" x2="390" y2="170" class="d-link"/>
-            <line x1="485" y1="132" x2="470" y2="170" class="d-link"/>
-            <rect x="340" y="170" width="180" height="44" rx="6" class="d-core"/>
-            <text x="430" y="196" class="d-label" text-anchor="middle">Cœur de réseau redondé</text>
-            <!-- Zones -->
-            <line x1="370" y1="214" x2="150" y2="258" class="d-link" marker-end="url(#arrow)"/>
-            <line x1="430" y1="214" x2="430" y2="258" class="d-link" marker-end="url(#arrow)"/>
-            <line x1="490" y1="214" x2="710" y2="258" class="d-link" marker-end="url(#arrow)"/>
-            <rect x="40" y="258" width="220" height="56" rx="6" class="d-zone"/>
-            <text x="150" y="282" class="d-label" text-anchor="middle">Zone IT — bureautique</text>
-            <text x="150" y="300" class="d-sub" text-anchor="middle">VLAN utilisateurs · Wi-Fi · impression</text>
-            <rect x="320" y="258" width="220" height="56" rx="6" class="d-zone d-zone-ot"/>
-            <text x="430" y="282" class="d-label" text-anchor="middle">Zone OT — industriel</text>
-            <text x="430" y="300" class="d-sub" text-anchor="middle">Automates · supervision · capteurs</text>
-            <rect x="600" y="258" width="220" height="56" rx="6" class="d-zone"/>
-            <text x="710" y="282" class="d-label" text-anchor="middle">Datacenter</text>
-            <text x="710" y="300" class="d-sub" text-anchor="middle">Spine-leaf · serveurs · stockage</text>
+            <!-- Transports -->
+            <ellipse cx="430" cy="40" rx="130" ry="28" class="d-cloud"/>
+            <text x="430" y="38" class="d-label" text-anchor="middle">Transports</text>
+            <text x="430" y="55" class="d-sub" text-anchor="middle">Internet · MPLS · 4G/5G</text>
+            <!-- Hubs -->
+            <line x1="370" y1="64" x2="270" y2="108" class="d-link"/>
+            <line x1="490" y1="64" x2="590" y2="108" class="d-link"/>
+            <rect x="150" y="108" width="240" height="60" rx="6" class="d-core"/>
+            <text x="270" y="133" class="d-label" text-anchor="middle">Hub SD-WAN — DC 1</text>
+            <text x="270" y="151" class="d-sub" text-anchor="middle">Sécurité centralisée · pare-feux redondés</text>
+            <rect x="470" y="108" width="240" height="60" rx="6" class="d-core"/>
+            <text x="590" y="133" class="d-label" text-anchor="middle">Hub SD-WAN — DC 2</text>
+            <text x="590" y="151" class="d-sub" text-anchor="middle">Secours géographique · bascule automatique</text>
+            <line x1="390" y1="138" x2="470" y2="138" class="d-link d-ha"/>
+            <!-- Overlay -->
+            <text x="430" y="205" class="d-sub" text-anchor="middle">Tunnels SD-WAN chiffrés (overlay)</text>
+            <!-- Spokes -->
+            <line x1="270" y1="168" x2="150" y2="272" class="d-link" marker-end="url(#arrow)"/>
+            <line x1="330" y1="168" x2="400 " y2="272" class="d-link" marker-end="url(#arrow)"/>
+            <line x1="590" y1="168" x2="660" y2="272" class="d-link" marker-end="url(#arrow)"/>
+            <rect x="40" y="272" width="220" height="56" rx="6" class="d-zone"/>
+            <text x="150" y="296" class="d-label" text-anchor="middle">Sites spoke — gabarit A</text>
+            <text x="150" y="314" class="d-sub" text-anchor="middle">Agences · double lien · boîtier SD-WAN</text>
+            <rect x="320" y="272" width="220" height="56" rx="6" class="d-zone"/>
+            <text x="430" y="296" class="d-label" text-anchor="middle">Sites spoke — gabarit B</text>
+            <text x="430" y="314" class="d-sub" text-anchor="middle">Petits sites · lien unique + 4G</text>
+            <rect x="600" y="272" width="220" height="56" rx="6" class="d-zone d-zone-ot"/>
+            <text x="710" y="296" class="d-label" text-anchor="middle">≈ 2 000 sites déployés</text>
+            <text x="710" y="314" class="d-sub" text-anchor="middle">Par vagues · plages de maintenance planifiées</text>
           </svg>
         </figure>
       </div>
@@ -274,9 +266,10 @@
           <span>Enseignement</span>
         </div>
         <blockquote class="quote">
-          <p>« Infrarch a su moderniser notre réseau multi-sites sans aucune coupure de service.
+          <p>« Infrarch a su moderniser notre réseau multi-sites en limitant les coupures de service
+          à des plages de maintenance planifiées avec nos équipes.
           Leur dossier d'architecture est devenu notre document de référence au quotidien. »</p>
-          <footer>— Directeur des systèmes d'information, groupe industriel (800 collaborateurs)</footer>
+          <footer>— Directeur des systèmes d'information, groupe multi-sites</footer>
         </blockquote>
       </div>
     </section>
@@ -289,12 +282,10 @@
           <h2>Parlons de votre projet</h2>
           <p>
             Un besoin d'audit, une refonte d'architecture, une mise en conformité ?
-            Décrivez-nous votre contexte : un ingénieur vous répond sous 48 h.
+            Décrivez-nous votre contexte et votre besoin.
           </p>
           <ul class="contact-details">
             <li><strong>Email</strong> <a href="mailto:contact@infrarch.fr">contact@infrarch.fr</a></li>
-            <li><strong>Téléphone</strong> <a href="tel:+33100000000">01 00 00 00 00</a></li>
-            <li><strong>Adresse</strong> 10 rue de l'Ingénierie, 75000 Paris</li>
             <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/raphael-parsus/" target="_blank" rel="noopener">linkedin.com/in/raphael-parsus</a></li>
           </ul>
         </div>

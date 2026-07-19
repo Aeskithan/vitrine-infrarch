@@ -24,6 +24,6 @@ form.addEventListener('submit', (e) => {
     form.reportValidity();
     return;
   }
-  status.textContent = 'Merci ! Votre demande a bien été enregistrée. Nous revenons vers vous sous 48 h.';
+  status.textContent = 'Merci ! Votre demande a bien été enregistrée. Nous revenons vers vous rapidement.';
   form.reset();
 });
