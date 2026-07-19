@@ -287,7 +287,6 @@
             <text x="80" y="180" class="d-label" text-anchor="middle">Trunk SIP</text>
             <text x="80" y="197" class="d-sub" text-anchor="middle">Opérateur · ToIP</text>
             <text x="80" y="226" class="d-sip-icon" text-anchor="middle">☎</text>
-            <line x1="150" y1="198" x2="180" y2="198" class="d-hub"/>
 
             <!-- Tenant AWS (droite) -->
             <rect x="866" y="150" width="144" height="96" rx="4" class="d-aws"/>
@@ -297,10 +296,9 @@
             <rect x="876" y="186" width="124" height="50" rx="3" class="d-aws-vpc"/>
             <text x="938" y="206" class="d-label" text-anchor="middle">VPC</text>
             <text x="938" y="223" class="d-sub" text-anchor="middle">Applications hébergées</text>
-            <line x1="840" y1="198" x2="866" y2="198" class="d-hub"/>
 
             <!-- Flux voix du site moyen débit vers Trunk SIP (via underlay Internet) -->
-            <path d="M 350,376 C 345,300 340,230 300,205 C 260,182 210,192 150,198" class="d-voice"/>
+            <path d="M 410,376 C 400,300 380,228 330,205 C 280,182 220,192 150,198" class="d-voice"/>
             <!-- Flux applicatif vers AWS (via underlay Internet) -->
             <path d="M 640,374 C 615,300 645,235 700,215 C 760,193 810,194 866,198" class="d-app"/>
 
