@@ -346,6 +346,7 @@ a:hover { text-decoration: underline; }
 .d-tag { fill: #ffcc66; font-size: 11px; font-weight: 600; font-family: "Segoe UI", sans-serif; }
 .d-purple { fill: #cbb8ea; font-size: 12px; font-family: "Segoe UI", sans-serif; }
 .d-srv { fill: rgba(0, 126, 189, 0.12); stroke: #38a9dd; stroke-width: 1.2; }
+.d-person { fill: none; stroke: #38a9dd; stroke-width: 2; stroke-linecap: round; }
 .d-srv-led { fill: #38a9dd; }
 .d-aws { fill: rgba(255, 153, 0, 0.06); stroke: #ff9900; stroke-width: 1.5; }
 .d-aws-icon { fill: #ff9900; }
