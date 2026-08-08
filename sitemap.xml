@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://www.infrarch.fr/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.infrarch.fr/expertise-fortinet.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://www.infrarch.fr/realisations.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Expertises — intégration -->
   <url>
-    <loc>https://www.infrarch.fr/expertise-meraki.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://www.infrarch.fr/expertise-fortinet.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.infrarch.fr/expertise-palo-alto.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.infrarch.fr/expertise-stormshield.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.infrarch.fr/numerisation-processus.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://www.infrarch.fr/expertise-meraki.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Expertises — conseil & services -->
   <url>
     <loc>https://www.infrarch.fr/audit-infrastructure.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.infrarch.fr/automatisation-reseau.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.infrarch.fr/realisations.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://www.infrarch.fr/numerisation-processus.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.infrarch.fr/mentions-legales.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
+
 </urlset>
